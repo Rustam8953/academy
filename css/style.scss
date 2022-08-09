@@ -1,0 +1,873 @@
+$blueTextColor: #00093C;
+$greyTextColor: #4F4F4F;
+$greyBorder: #E0E0E0;
+$greyFooterColor: #BDBDBD;
+$btnColor: #F7941D;
+$orangeColor: #F7BC75;
+
+.nav {
+    display: flex;
+    height: 110px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    &-logo {
+        background: url('./../img/header/Group\ 1.svg');
+        height: 71px;
+        width: 100px;
+        background-size: cover;
+        background-position: center;
+        &-dark {
+            background: url('./../img/header/Group\ 1\ \(1\).svg');
+            height: 71px;
+            width: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    &-list {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+    &-contact {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        &-tel {
+            font-size: 18px;
+            font-weight: 600;
+            color: $blueTextColor;
+            text-decoration: none;
+        }
+    }
+}
+
+.row {
+    position: relative;
+    height: 480px;
+    background: url('./../img/header/row/slider\ 1.svg');
+    background-size: cover;
+    overflow: hidden;
+    &-ball {
+
+    }
+    &-block {
+        position: relative;
+        width: 1032px;
+    }
+    &-bck {
+        background-color: $blueTextColor;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: right;
+    }
+    &-bck2 {
+        background: url('./../img/header/row/Group\ 594.svg');
+        height: 442px;
+        width: 1014px;
+        top: 19px;
+        right: 0;
+    }
+    &-text {
+        position: absolute;
+        width: 575px;
+        color: #ffffff;
+        right: 87px;
+        top: 126px;
+    }
+    &-title {
+        font-size: 36px;
+        font-weight: 700;
+        &1 {
+            padding-bottom: 26px;
+        }
+        &2 {
+            padding-bottom: 40px;
+        }
+    }
+    &-plus {
+        background: url('./../img/header/row/Vector.svg');
+        width: 130px;
+        height: 130px;
+        right: 701px;
+        top: 73px;
+    }
+    &-ball {
+        background: url('./../img/header/row/Vector\ \(2\).svg');
+        width: 120px;
+        height: 120px;
+        top: 35px;
+        right: -48px;
+    }
+    &-line1 {
+        background: url('./../img/header/row/Vector\ 181.svg');
+        height: 132px;
+        width: 339px;
+        bottom: -9px;
+        right: 535px;
+    }
+    &-thirty {
+        background: url('./../img/header/row/Vector\ \(1\).svg');
+        width: 100px;
+        height: 82px;
+        right: 292px;
+        top: 340px;
+    }
+    &-plus2 {
+        background: url('./../img/header/row/Vector\ \(3\).svg');
+        width: 85px;
+        height: 85px;
+        bottom: 283px;
+        right: 300px;
+    }
+    &-line2 {
+        background: url('./../img/header/row/Vector\ 178.svg');
+        height: 267px;
+        width: 127px;
+        bottom: -47px;
+        left: 1534px;
+    }
+    &-items {
+        width: 50%;
+        height: 480px;
+    }
+}
+
+.container {
+    &__md1 {
+        display: flex;
+        gap: 40px;
+        padding: 105px 0 150px;
+        &-left {
+            position: relative;
+        }
+        &-message {
+            background: url('./../img/container/md1/Union.svg');
+            width: 265px;
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 20px 0 0 20px;
+        }
+        &-union {
+            background: url('./../img/container/md1/Сова-01\ 1.svg');
+            width: 168px;
+            height: 190px;
+            position: absolute;
+            left: -40px;
+            top: 180px;
+        }
+        &-link {
+            padding: 15px 19px;
+            border-radius: 6px;
+            position: relative;
+            z-index: 10;
+            background-color: #ffffff;
+            font-size: 14px;
+            box-shadow: -1px 1px 12px #27AAE1;
+            font-weight: 500;
+        }
+        &-block {
+            display: flex;
+            gap: 20px;
+        }
+        &-items {
+            height: 200px;
+            padding-top: 38px;
+        }
+    }
+    &__md2 {
+        &-block {
+            width: 780px;
+            height: 436px;
+            margin: 0 auto;
+            position: relative;
+        }
+        &-video {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: url('./../img/container/md2/603123.svg');
+            z-index: 2;
+        }
+        &-bck {
+            width: 780px;
+            height: 436px;
+            left: 0;
+            top: 0;
+            background-color: $blueTextColor;
+            opacity: 0.5;
+            border-radius: 20px;
+            z-index: 3;
+        }
+        &-line {
+            top: -68px;
+            left: -96px;
+            z-index: 1;
+            &::before {
+                content: url('./../img/container/md2/Vector.svg');
+            }
+        }
+        &-line2 {
+            top: -58px;
+            right: -244px;
+            &::before {
+                content: url('./../img/container/md2/Vector\ 184.svg');
+            }
+        }
+        &-line3 {
+            right: -144px;
+            bottom: -161px;
+            &::before {
+                content: url('./../img/container/md2/Vector\ \(1\).svg');
+            }
+        }
+        &-line4 {
+            bottom: 24px;
+            left: -266px;
+            &::before {
+                content: url('./../img/container/md2/Vector\ 183.svg');
+            }
+        }
+    }
+    &__md3 {
+        padding: 110px 0 80px;
+        &-title {
+            font-size: 24px;
+            font-weight: 700;
+            width: 770px;
+            padding-bottom: 50px;
+        }
+        &-items {
+            display: flex;
+            gap: 80px;
+        }
+        &-item {
+            &-text {
+                font-size: 20px;
+                font-weight: 500;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            &-text1 {
+                &::before {
+                    content: url('./../img/container/md3/600\ \(1\).svg');
+                }
+            }
+            &-text2 {
+                &::before {
+                    content: url('./../img/container/md3/82.svg');
+                }
+            }
+            &-text3 {
+                &::before {
+                    content: url('./../img/container/md3/14\ 795.svg');
+                }
+            }
+        }
+    }
+    &__md4 {
+        background-color: $blueTextColor;
+        height: 600px;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        overflow: hidden;
+        &-bckg {
+            background: url('./../img/container/md4/Group\ 788.svg');
+            height: 550px;
+            width: 1920px;
+            top: 19px;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+        &-title {
+            padding: 50px 0 44px;
+        }
+        &-plus {
+            top: 50px;
+            left: 292px;
+            &::before {
+                content: url('./../img/container/md4/Vector.svg');
+            }
+        }
+        &-line {
+            top: 377px;
+            left: 930px;
+            &::before {
+                content: url('./../img/container/md4/Vector\ \(1\).svg');
+            }
+        }
+        &-ball {
+            right: 290px;
+            bottom: 71px;
+            &::before {
+                content: url('./../img/container/md4/Vector\ \(2\).svg');
+            }
+        }
+        &-line2 {
+            left: -5px;
+            bottom: 63px;
+            &::before {
+                content: url('./../img/container/md4/Vector\ 189.svg');
+            }
+        }
+        &-line3 {
+            right: 302px;
+            top: -12px;
+            &::before {
+                content: url('./../img/container/md4/Vector\ 188.svg');
+            }
+        }
+    }
+    &__md5 {
+        padding: 85px 0 340px;
+        &-items {
+            display: flex;
+            font-size: 18px;
+            font-weight: 500;
+            gap: 20px;
+            padding: 60px 0;
+        }
+        &-item {
+            width: 280px;
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+            }
+            &-text1 {
+                &::before {
+                    content: url('./../img/container/md5/Group\ 797.svg');
+                }
+            }
+            &-text2 {
+                &::before {
+                    content: url('./../img/container/md5/Group\ 798.svg');
+                }
+            }
+            &-text3 {
+                &::before {
+                    content: url('./../img/container/md5/Group\ 800.svg');
+                }
+            }
+            &-text4 {
+                &::before {
+                    content: url('./../img/container/md5/Group\ 801.svg');
+                }
+            }
+        }
+    }
+    &__md6 {
+        padding: 0 0 100px;
+        &-num {
+            font-size: 70px;
+            font-weight: bold;
+            line-height: 70px;
+        }
+        &-month {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        &-title {
+            font-size: 36px;
+            font-weight: 500;
+        }
+        &-subtitle {
+            font-size: 18px;
+            max-width: 540px;
+            line-height: 24px;
+        }
+        &-items {
+            display: grid;
+            gap: 20px;
+            grid-template-areas: 
+                'item1 item1 item1'
+                'item2 item3 item4'
+                'item2 item5 item5'
+            ;
+        }
+        &-item {
+            border-radius: 20px;
+            padding: 40px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 1px 1px 13px #bab7b751;
+            &-title {
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+        &-button {
+            height: 60px;
+            outline: none;
+            border: 2px solid #000000;
+            border-radius: 10px;
+            width: 222px;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            &::after {
+                content: url('./../img/container/md6/Vector\ 137.svg');
+                margin-top: 3px;
+            }
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}
+
+.footer {
+    background-color: $blueTextColor;
+    padding: 70px 0 55px;
+    color: #ffffff;
+    font-size: 14px;
+    position: relative;
+    &-items {
+        display: flex;
+        gap: 80px;
+    }
+    &__contact {
+        width: 200px;
+        padding-top: 50px;
+        &-logo {
+            &::before {
+                content: url('./../img/footer/Group\ 802.svg');
+            }
+            padding-bottom: 45px;
+        }
+        &-tel {
+            font-size: 18px;
+        }
+        &-adress {
+            padding: 12px 0;
+        }
+        &-soc {
+            display: flex;
+            gap: 20px;
+            padding: 37px 0 30px;
+            &-item {
+                display: flex;
+                align-items: center;
+            }
+            &-item1 {
+                &::before {
+                    content: url('./../img/footer/.svg');
+                }
+            }
+            &-item2 {
+                &::before {
+                    content: url('./../img/footer/.svg');
+                }
+            }
+            &-item3 {
+                &::before {
+                    content: url('./../img/footer/.svg');
+                }
+            }
+            &-item4 {
+                &::before {
+                    content: url('./../img/footer/.svg');
+                }
+            }
+            &-item5 {
+                &::before {
+                    content: url('./../img/footer/.svg');
+                }
+            }
+        }
+        &-subtitle {
+            font-size: 12px;
+            color: $greyFooterColor;
+        }
+    }
+    &__list {
+        display: flex;
+        gap: 60px;
+        &-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &-item {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 18px;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        &-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            padding-bottom: 16px;
+        }
+        &-menu {
+            max-width: 267px;
+        }
+    }
+    & a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    &-form {
+        border-radius: 20px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        padding: 40px;
+        color: #000000;
+        position: relative;
+        display: flex;
+        gap: 50px;
+        justify-content: right;
+        width: 1100px;
+        z-index: 10;
+        &-img {
+            background: url('./../img/footer/Union.svg');
+            height: 190px;
+            width: 417px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        &-text {
+            position: absolute;
+            top: 22px;
+            left: 49px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            width: 350px;
+        }
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 30px;
+            padding-bottom: 20px;
+        }
+        &-right {
+            width: 440px !important;
+        }
+        & input {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 9, 60, 0.1);
+            border: 0;
+            outline: none;
+            color: #4F4F4F;
+            font-size: 14px;
+            border-radius: 6px;
+            padding: 0;
+            padding-left: 20px;
+        }
+        &-input {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &-name {
+                width: 440px;
+            }
+            &-contact {
+                display: flex;
+                gap: 20px;
+                width: 100%;
+                & input {
+                    width: 210px;
+                }
+            }
+        }
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top:20px;
+            &-text {
+                font-size: 10px;
+                line-height: 14px;
+                color: $greyTextColor;
+                width: 211px;
+            }
+        }
+        &-bird {
+            position: absolute;
+            top: 24px;
+            left: -50px;
+            &::before {
+                content: url('./../img/footer/Сова-01\ 2.svg');
+            }
+        }
+        &-bckg {
+            width: 1140px;
+            height: 250px;
+            position: absolute;
+            background: linear-gradient(90deg, #F7941D 0%, #27AAE1 100%);
+            opacity: 0.3;
+            filter: blur(16px);
+            border-radius: 20px;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            right: 0;
+        }
+    }
+    &-position {
+        position: absolute;
+        width: 1180px;
+        top: -230px;
+    }
+}
+
+.box {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.grey-block {
+    background-color: #f6f7f9;
+}
+
+.display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider {
+    &__indicators {
+        display: flex;
+        width: 880px;
+        justify-content: space-between;
+    }
+    &-text {
+        &::before {
+            content: url('./../img/container/md1/right/children.svg');
+        }
+        &-title {
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            font-weight: 700;
+            & span {
+                font-weight: 400;
+                font-size: 12px;
+                color: $greyTextColor;
+            }
+        }
+    }
+    &-text2 {
+        &::before {
+            content: url('./../img/container/md1/right/children\ \(1\).svg');
+        }
+    }
+    &-text3 {
+        &::before {
+            content: url('./../img/container/md1/right/family.svg');
+        }
+    }
+    &-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding-bottom: 13px;
+    }
+    &-border {
+        border-bottom: 2px solid $greyBorder;
+        width: 100%;
+    }
+    &-item {
+        width: 100%;
+    }
+    &__item {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    &-light {
+        color: #ffffff;
+    }
+    &-dark {
+        color: #000000;
+    }
+}
+
+.review {
+    &-item {
+        width: 240px;
+        background-color: #ffffff;
+        position: relative;
+        z-index: 10;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &-info {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    &-img {
+        width: 40px;
+        height: 40px;
+        background: url('./../img/container/md4/user/Ellipse\ 185.svg');
+    }
+    &-name {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &-about {
+        font-size: 12px;
+        font-weight: 500;
+        color: $greyTextColor;
+        width: 190px;
+    }
+    &-star {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-top: 10px;
+        &::before {
+            content: url('./../img/container/md4/Star\ 1.svg');
+            padding-top: 2px;
+        }
+    }
+    &-window {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        overflow: hidden;
+    }
+}
+
+.btn {
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    background-color: $btnColor;
+    height: 50px;
+    color: #ffffff;
+    &-form {
+        padding: 0 56px;
+    }
+}
+
+.item1 {
+    background-color: $orangeColor;
+    width: 1180px;
+    height: 160px;
+    grid-area: item1;
+}
+
+.item2 {
+    background-color: #C5DDFF;
+    width: 480px;
+    height: 460px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 50px;
+    text-align: center;
+    grid-area: item2;
+    &-img {
+        &::before {
+            content: url('./../img/container/md6/monitor.svg');
+        }
+    }
+}
+
+.item3 {
+    background-color: #B8EFCF;
+    width: 330px;
+    height: 220px;
+    grid-area: item3;
+    flex-direction: column;
+    &-img {
+        &::before {
+            content: url('./../img/container/md6/newspaper.svg');
+        }
+    }
+}
+
+.item4 {
+    background-color: #FFEEF6;
+    width: 330px;
+    height: 220px;
+    grid-area: item4;
+    flex-direction: column;
+    &-img {
+        &::before {
+            content: url('./../img/container/md6/diagram.svg');
+        }
+    }
+}
+
+.item5 {
+    width: 680px;
+    height: 220px;
+    background-color: #FFE38E;
+    grid-area: item5;
+    gap: 50px;
+    &-img {
+        &::before {
+            content: url('./../img/container/md6/Group\ 837.svg');
+        }
+    }
+}
+
+h3 {
+    margin: 0;
+}
+
+.header-light {
+    background-color: #ffffff;
+}
+
+.header-dark {
+    background-color: $blueTextColor;
+    color: #ffffff;
+    & a {
+        color: #ffffff;
+    }
+}
+
+button {
+    cursor: pointer;
+}
