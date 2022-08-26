@@ -8,3 +8,13 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+::-webkit-scrollbar {
+    background-color: rgb(159, 156, 156);
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+}

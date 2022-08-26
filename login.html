@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./lib/ui-components-master/ChiefSlider/chief-slider.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav header-dark"></div>
+    </header>
+    <container class="container">
+        <div class="grey-block">
+            <div class="box">
+                <div class="login slider-login">
+                    <div class="slider__wrapper">
+                        <nav class="slider__indicators">
+                            <li class="login__indicators-item" data-section="1" data-slide-to="1">
+                                <div class="login-text" data-section="1" data-slide-to="1">Вход</div>
+                                <div class="slider-border" data-section="1" data-slide-to="1"></div>
+                            </li>
+                            <li class="login__indicators-item" data-section="2" data-slide-to="2">
+                                <div class="login-text" data-section="2" data-slide-to="2">Регистрация</div>
+                                <div class="slider-border" data-section="2" data-slide-to="2"></div>
+                            </li>
+                        </nav>
+                        <div class="slider__items">
+                            <div class="slider__item login__item" data-section="1">
+                                <form action="">
+                                    <div class="login__item-input">
+                                        <input type="tel" class="login__input" data-phone-pattern placeholder="Телефон">
+                                        <input type="email" class="login__input" placeholder="Почта">
+                                    </div>
+                                    <div class="login__item-soc">
+                                        <div class="login__item-title">Войти с помощью соцсетей:</div>
+                                        <div class="login__item-soc-link">
+                                            <a href="" class="vk"></a>
+                                            <a href="" class="inst"></a>
+                                            <a href="" class="facebook"></a>
+                                            <a href="" class="youtube"></a>
+                                            <a href="" class="telegram"></a>
+                                        </div>
+                                    </div>
+                                    <div class="login__item-btn">
+                                        <button class="btn btn-form">Войти</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="slider__item login__item" data-section="2">
+                                <form action="">
+                                    <div class="login__item-input">
+                                        <input type="tel" class="login__input" data-phone-pattern placeholder="Телефон">
+                                        <input type="email" class="login__input" placeholder="Почта">
+                                        <input type="name" class="login__input" placeholder="Имя">
+                                    </div>
+                                    <div class="login__item-soc">
+                                        <div class="login__item-title">Зарегестрироваться с помощью соцсетей:</div>
+                                        <div class="login__item-soc-link">
+                                            <a href="" class="vk"></a>
+                                            <a href="" class="inst"></a>
+                                            <a href="" class="facebook"></a>
+                                            <a href="" class="youtube"></a>
+                                            <a href="" class="telegram"></a>
+                                        </div>
+                                    </div>
+                                    <div class="login__item-btn">
+                                        <button class="btn btn-form">Регистрация</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </container>
+    <footer class="footer footer-login-block"></footer>
+
+    <script src="./js/header/header.js"></script>
+    <script defer src="./lib/ui-components-master/ChiefSlider/chief-slider.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const slider = new ChiefSlider('.slider-login', {
+                loop: false,
+                autoplay: false,
+                swipe: false,
+                refresh: true,
+            })
+        })
+    </script>
+    <script src="./js/tel.js"></script>
+    <script src="./js/footer/footer.js"></script>
+</body>
+</html>

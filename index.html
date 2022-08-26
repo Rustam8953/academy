@@ -10,12 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./lib/ui-components-master/ChiefSlider/chief-slider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="header">
         <div class="header-block">
-            <div class="nav header-light">
-                
+            <div class="nav header-light"></div>
+            <div class="mobile-menu">
+                <div class="box">
+                    <div class="mobile-logo"></div>
+                    <div class="mobile-burger"></div>
+                </div>
             </div>
             <div class="row">
                 <div class="row-items">
@@ -37,6 +44,7 @@
                     </div>
                     
                 </div>
+                <div class="row-img"></div>
                 <div class="row-plus2 img-row"></div>
                 <div class="row-line2 img-row"></div>
             </div>
@@ -55,43 +63,61 @@
                             </div>
                             <div class="container__md1-union"></div>
                         </div>
-                        <div class="container__md1-right">
-                            <div class="slider__wrapper">
+                        <div class="container__md1-right slider">
+                            <div class="slider__wrapper md1-slider">
                                 <nav class="slider__indicators">
-                                    <li class="slider-item">
-                                        <div class="slider-text slider-display">
-                                            <div class="slider-text-title">Дети <span>8 — 14 лет</span></div>
+                                    <li class="slider-item" data-section="1" data-slide-to="1">
+                                        <div class="slider-text slider-display" data-section="1" data-slide-to="1">
+                                            <div class="slider-text-title" data-section="1" data-slide-to="1">Дети <span data-section="1" data-slide-to="1">8 — 14 лет</span></div>
                                         </div>
-                                        <div class="slider-border"></div>
+                                        <div class="slider-border" data-section="1" data-slide-to="1"></div>
                                     </li>
-                                    <li class="slider-item">
-                                        <div class="slider-text2 slider-display">
-                                            <div class="slider-text-title">Подростки <span>14 — 18 лет</span></div>
+                                    <li class="slider-item" data-section="2" data-slide-to="2">
+                                        <div class="slider-text2 slider-display" data-section="2" data-slide-to="2">
+                                            <div class="slider-text-title" data-section="2" data-slide-to="2">Подростки <span data-section="2" data-slide-to="2">14 — 18 лет</span></div>
                                         </div>
-                                        <div class="slider-border"></div>
+                                        <div class="slider-border" data-section="2" data-slide-to="2"></div>
                                     </li>
-                                    <li class="slider-item">
-                                        <div class="slider-text3 slider-display">
-                                            <div class="slider-text-title">Взрослые <span>18 — ∞ </span></div>
+                                    <li class="slider-item" data-section="3" data-slide-to="3">
+                                        <div class="slider-text3 slider-display" data-section="3" data-slide-to="3">
+                                            <div class="slider-text-title" data-section="3" data-slide-to="3">Взрослые <span data-section="3" data-slide-to="3">18 — ∞ </span></div>
                                         </div>
-                                        <div class="slider-border"></div>
+                                        <div class="slider-border" data-section="3" data-slide-to="3"></div>
                                     </li>
                                 </nav>
                                 <div class="slider__items container__md1-items">
-                                    <div class="slider__item">
-                                        <div class="container__md1-block">
+                                    <div class="slider__item container__md1-item" data-section="1">
+                                            <span class="container__md1-link">Робототехника</span>
+                                            <span class="container__md1-link">Созданиеигр</span>
+                                            <span class="container__md1-link">Web-разработка</span>
+                                            <span class="container__md1-link">Мультимедиа</span>
+                                            <span class="container__md1-link">Шахматы</span>
+                                            <span class="container__md1-link">3Dмоделирование и дизайн</span>
+                                            <span class="container__md1-link">Английский язык</span>
+                                            <span class="container__md1-link">Блогинг</span>
+                                            <span class="container__md1-link">Soft skills</span>
+                                    </div>
+                                    <div class="slider__item container__md1-item" data-section="2">
                                             <span class="container__md1-link"><span class="container__md1-link-text">Робототехника</span><span class="container__md1-blur"></span></span>
                                             <span class="container__md1-link">Создание игр</span>
                                             <span class="container__md1-link">Web-разработка</span>
                                             <span class="container__md1-link">Мультимедиа</span>
                                             <span class="container__md1-link">Шахматы</span>
-                                        </div>
-                                        <div class="container__md1-block">
-                                            <span class="container__md1-link">3D-моделирование и дизайн</span>
+                                            <span class="container__md1-link">3Dмоделирование и дизайн</span>
                                             <span class="container__md1-link">Английский язык</span>
                                             <span class="container__md1-link">Блогинг</span>
                                             <span class="container__md1-link">Soft skills</span>
-                                        </div>
+                                    </div>
+                                    <div class="slider__item container__md1-item" data-section="3">
+                                            <span class="container__md1-link"><span class="container__md1-link-text">Робототехника</span><span class="container__md1-blur"></span></span>
+                                            <span class="container__md1-link">Создание игр</span>
+                                            <span class="container__md1-link">Web-разработка</span>
+                                            <span class="container__md1-link">Мультимедиа</span>
+                                            <span class="container__md1-link">Шахматы</span>
+                                            <span class="container__md1-link">3Dмоделирование и дизайн</span>
+                                            <span class="container__md1-link">Английский язык</span>
+                                            <span class="container__md1-link">Блогинг</span>
+                                            <span class="container__md1-link">Soft skills</span>
                                     </div>
                                 </div>
                             </div>
@@ -141,10 +167,10 @@
                                     <button class="container__md6-button">Подробнее</button>
                                 </div>
                             </div>
-                            <div class="container__md6-item item3">
+                            <a href="./news.html" class="container__md6-item item3">
                                 <div class="container__md6-img item3-img"></div>
                                 <h3 class="container__md6-item-title">Новости Академии</h3>
-                            </div>
+                            </a>
                             <div class="container__md6-item item4">
                                 <div class="container__md6-img item4-img"></div>
                                 <h3 class="container__md6-item-title">Мир IT</h3>
@@ -161,17 +187,19 @@
                 </div>
             </div>
 
-            <div class="container__md4">
-                <div class="container__md4-bckg absolute"></div>
-                <div class="container__md4-ball absolute"></div>
-                <div class="container__md4-plus absolute"></div>
-                <div class="container__md4-line absolute"></div>
-                <div class="container__md4-line2 absolute"></div>
-                <div class="container__md4-line3 absolute"></div>
-                <div class="container__md4-title title title-light">Отзывы наших студентов</div>
-                <div class="slider__wrapper">
-                    <div class="slider__items review-window">
-                        
+            <div class="container__md4 ">
+                <div class="container__md4-block slider-review">
+                    <div class="container__md4-bckg absolute"></div>
+                    <div class="container__md4-ball absolute"></div>
+                    <div class="container__md4-plus absolute"></div>
+                    <div class="container__md4-line absolute"></div>
+                    <div class="container__md4-line2 absolute"></div>
+                    <div class="container__md4-line3 absolute"></div>
+                    <div class="container__md4-title title title-light">Отзывы наших студентов</div>
+                    <div class="slider__wrapper">
+                        <div class="review-window slider__items">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,8 +223,29 @@
 
     <footer class="footer footer-with-block"></footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/header/header.js"></script>
+    <script defer src="./lib/ui-components-master/ChiefSlider/chief-slider.min.js"></script>
     <script src="./js/review/review.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = new ChiefSlider('.slider', {
+                loop: true,
+                autoplay: false,
+                swipe: true,
+                refresh: true,
+            })
+        })
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = new ChiefSlider('.slider-review', {
+                autoplay: false,
+                swipe: true,
+                refresh: true,
+            })
+        })
+    </script>
+    <script src="./js/tel.js"></script>
     <script src="./js/footer/footer.js"></script>
 </body>
 </html>

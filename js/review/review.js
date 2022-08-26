@@ -62,7 +62,7 @@ const reviewArray = [
 
 reviewArray.forEach((item) => {
     const reviewHTML = `
-    <span class="slider-item review-item" data-id=${item.id}>
+    <div class="review-item slider__item" data-id=${item.id}>
         <div class="review-info">
             <div class="review-img"></div>
             <div class="review-contact">
@@ -72,8 +72,15 @@ reviewArray.forEach((item) => {
         </div>
         <div class="review-text">${item.text}</div>
         <div class="review-star">${item.star}</div>
-    </span>`;
+    </div>`;
     reviewWindow.insertAdjacentHTML('beforeend', reviewHTML);
 })
 
-console.log(1180/4);
+console.log(650 * reviewArray.length);
+
+$(document).ready(function() {
+    $(".owl-carousel").owlCarousel({
+        margin: 20,
+        startPosition: 0,
+    })
+})
