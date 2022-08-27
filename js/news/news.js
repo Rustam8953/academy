@@ -63,7 +63,7 @@ if(localStorage.getItem('page')) {
 newsArray.forEach((item) => {
     const newsHTML = `
     <a href="./news-page.html" class="news-item data-news">
-        <div class="news-img" img="${item.img}" style="background: url('./../img/container/news/${item.img}');"></div>
+        <div class="news-img" img="${item.img}" style="background: url('./img/container/news/${item.img}');"></div>
         <div class="news-info">
             <div class="news-date">${item.date}</div>
             <div class="news-title">${item.title}</div>
@@ -104,7 +104,7 @@ function renderPage(page) {
             <div class="news-vector news-vector2"></div>
             <div class="news-vector news-vector3"></div>
             <div class="news-vector news-vector4"></div>
-            <div class="news-page-img" style="background: url('./../img/container/news/${page.img}'); background-repeat: no-repeat; background-size: cover; margin-right: 0;"></div>
+            <div class="news-page-img" style="background: url('./img/container/news/${page.img}'); background-repeat: no-repeat; background-size: cover; margin-right: 0;"></div>
         </div>
         <div class="news-page-text">
         
