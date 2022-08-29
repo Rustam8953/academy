@@ -32,7 +32,7 @@ function darkWindow() {
         <div class="display nav-dark">
             <a href="./index.html"><div class="nav-logo-dark"></div></a>
             <div class="nav-list">
-                <div class="nav-list-item">Все курсы</div>
+                <a href="./courses.html" class="nav-list-item">Все курсы</a href="./courses.html">
                 <a href="./events.html" class="nav-list-item">Мероприятия</a>
                 <a href="./news.html" class="nav-list-item">Новости</a>
                 <a href="./career.html" class="nav-list-item">Карьера</a>
@@ -54,7 +54,7 @@ function lightwindow() {
         <div class="display">
             <a href="./index.html"><div class="nav-logo"></div></a>
             <div class="nav-list">
-                <div class="nav-list-item">Все курсы</div>
+                <a href="./courses.html" class="nav-list-item">Все курсы</a>
                 <a href="./events.html" class="nav-list-item">Мероприятия</a>
                 <a href="./news.html" class="nav-list-item">Новости</a>
                 <a href="./career.html" class="nav-list-item">Карьера</a>
@@ -75,9 +75,22 @@ const mobileLine1 = document.querySelector('.mobile-line1');
 const mobileLine2 = document.querySelector('.mobile-line2');
 const mobileLine3 = document.querySelector('.mobile-line3');
 
-mobileMenu.addEventListener('click', () => {
-    mobileLine2.classList.toggle('display-none');
-    mobileLine1.classList.toggle('transform-line1');
-    mobileLine3.classList.toggle('transform-line3');
-    navMenu.classList.toggle('transform-menu');
+if(mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        mobileLine2.classList.toggle('display-none');
+        mobileLine1.classList.toggle('transform-line1');
+        mobileLine3.classList.toggle('transform-line3');
+        navMenu.classList.toggle('transform-menu');
+    })
+}
+
+const progress = document.querySelectorAll('progress');
+
+window.addEventListener('scroll', () => {
+    progress.forEach((item) => {
+        const window = document.body.scrollTop || document.documentElement.scrollTop
+        const offset = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        const scrolled = window / offset
+        item.value = scrolled
+    })
 })

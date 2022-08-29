@@ -5,6 +5,8 @@
   align-items: center;
   font-size: 14px;
   font-weight: 500;
+  position: relative;
+  justify-content: center;
 }
 
 .nav-logo {
@@ -25,8 +27,26 @@
 
 .nav-list {
   display: flex;
-  gap: 50px;
   align-items: center;
+  height: 100%;
+  flex: 0.7;
+}
+
+.nav-list-item {
+  height: 100%;
+  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  white-space: bottom;
+  position: relative;
+  border-bottom: 4px solid transparent;
+}
+
+.nav-list-item:hover {
+  border-color: black;
+  text-decoration: none;
 }
 
 .nav-contact {
@@ -40,6 +60,39 @@
   font-weight: 600;
   color: #00093C;
   text-decoration: none;
+}
+
+.nav-block {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 10000000;
+}
+
+.nav-block .box {
+  height: 100%;
+}
+
+.nav progress {
+  position: absolute;
+  top: 110px;
+  height: 4px;
+  width: 100%;
+  z-index: 30;
+  border-radius: 0px;
+  background-color: #ffffff;
+}
+
+.nav progress::-webkit-progress-bar {
+  background-color: #c7bcbc;
+}
+
+.nav progress::-webkit-progress-value {
+  background-color: #6565a8;
 }
 
 .header-light a {
@@ -216,6 +269,10 @@
 .container__md1-item {
   width: 800px !important;
   padding-left: 20px;
+}
+
+.container__md2 {
+  overflow: hidden;
 }
 
 .container__md2-block {
@@ -1144,6 +1201,21 @@
   padding-bottom: 330px;
 }
 
+.courses__items {
+  display: grid;
+  grid-template-columns: repeat(2, 430px);
+  gap: 20px;
+  grid-template-rows: 250px;
+}
+
+.courses__item {
+  height: 250px;
+  width: 430px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 1px 1px 10px 1px #8d8383;
+}
+
 .contact {
   padding: 20px 0 330px;
 }
@@ -1216,8 +1288,6 @@
 }
 
 .footer {
-  background-color: #00093C;
-  padding: 70px 0 55px;
   color: #ffffff;
   font-size: 14px;
   position: relative;
@@ -1225,6 +1295,8 @@
 
 .footer-items {
   display: flex;
+  background-color: #00093C;
+  padding: 70px 0 55px;
   gap: 80px;
 }
 
@@ -1406,10 +1478,10 @@
   position: absolute;
   top: 24px;
   left: -50px;
-}
-
-.footer-form-bird::before {
-  content: url("./../img/footer/Сова-01 2.svg");
+  width: 277px;
+  height: 312px;
+  background: url("./../img/footer/Сова-01 2.svg");
+  background-size: cover;
 }
 
 .footer-form-bckg {
@@ -1430,6 +1502,11 @@
   position: absolute;
   width: 1180px;
   top: -230px;
+}
+
+.footer .box {
+  display: flex;
+  justify-content: space-between;
 }
 
 .openings {
@@ -1545,6 +1622,8 @@
 .display {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .slider__indicators {
@@ -1921,7 +2000,7 @@ input {
 
 @media (max-width: 800px) {
   .nav {
-    position: absolute;
+    position: fixed;
     z-index: 100;
     height: 100%;
     margin-top: 60px;
@@ -1953,6 +2032,12 @@ input {
   .nav-contact {
     flex-direction: column;
     gap: 12px;
+  }
+  .nav progress {
+    display: none;
+  }
+  .nav-block {
+    height: 100%;
   }
   .box {
     width: 320px;
@@ -1999,15 +2084,37 @@ input {
   .row-title2 {
     padding-bottom: 21px;
   }
+  .mobile-block {
+    width: 100%;
+    height: 60px;
+  }
   .mobile-menu {
     display: flex;
     height: 60px;
     background-color: #00093C;
     align-items: center;
+    position: fixed;
+    z-index: 1000000;
+    width: 100%;
   }
   .mobile-menu .box {
     display: flex;
     justify-content: space-between;
+  }
+  .mobile-menu progress {
+    height: 2px;
+    position: fixed;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    z-index: 30;
+    background-color: white;
+  }
+  .mobile-menu progress::-webkit-progress-bar {
+    background-color: #c7bcbc;
+  }
+  .mobile-menu progress::-webkit-progress-value {
+    background-color: #6565a8;
   }
   .mobile-logo {
     width: 57px;
@@ -2028,6 +2135,7 @@ input {
     gap: 3px;
     justify-content: center;
     transform: rotate(180deg);
+    overflow: hidden;
   }
   .mobile-line {
     width: 18px;
@@ -2044,6 +2152,7 @@ input {
   }
   .container__md1 {
     flex-direction: column;
+    padding: 40px 0 38px;
   }
   .container__md1-message {
     background: url("./../img/mobile/Union (1).svg");
@@ -2062,6 +2171,9 @@ input {
   .container__md1-left {
     padding: 0 10px;
   }
+  .container__md1-right {
+    padding-top: 36px;
+  }
   .container__md1-right .slider__indicators {
     width: 300px;
   }
@@ -2077,9 +2189,11 @@ input {
     line-height: 58px;
     margin-right: 10px;
     white-space: nowrap;
+    font-size: 12px;
   }
   .container__md1-items {
     height: 400px;
+    padding-top: 20px;
   }
   .container__md1-item {
     height: 800px;
@@ -2135,6 +2249,9 @@ input {
     gap: 0;
     font-size: 18px;
   }
+  .container__md6 {
+    padding-bottom: 20px;
+  }
   .container__md6-items {
     justify-content: center;
     grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5';
@@ -2186,6 +2303,9 @@ input {
   .container__md6-text {
     gap: 50px;
   }
+  .container__md5 {
+    padding: 34px 0 0px;
+  }
   .container__md5-items {
     display: grid;
     grid-template-columns: repeat(2, 145px);
@@ -2205,11 +2325,17 @@ input {
   .container__md4-bckg {
     display: none;
   }
+  .container__events {
+    padding-bottom: 50px;
+  }
   .container__events-items {
     grid-template-areas: 'item1' 'item6' 'item7' 'item8' 'item9' 'item10' 'item11' 'item12' 'item13';
   }
   .container__events-item {
     width: 300px;
+  }
+  .news {
+    padding-bottom: 50px;
   }
   .news-items {
     grid-template-columns: repeat(1, 300px);
@@ -2264,23 +2390,75 @@ input {
     margin-left: 0;
     margin: 0 auto;
   }
-  .footer {
-    padding-bottom: 20px;
+  .grey-block {
+    background-color: #ffffff;
   }
   .footer-position {
     width: 320px;
     position: static;
-    display: none;
   }
   .footer-form {
     flex-direction: column;
     width: 300px;
+    padding: 0;
+    padding-bottom: 40px;
+  }
+  .footer-form-right {
+    width: 300px !important;
+  }
+  .footer-form-bckg {
+    display: none;
+  }
+  .footer-form-left {
+    width: 270px;
+  }
+  .footer-form-img {
+    width: 100%;
+    height: 150px;
+    background-size: contain;
+    margin-left: 30px;
+  }
+  .footer-form-bird {
+    width: 120px;
+    height: 136px;
+    left: -95px;
+  }
+  .footer-form-text {
+    width: 220px;
+    top: 9px;
+    left: 35px;
+  }
+  .footer-form-title {
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+  .footer-form-subtitle {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .footer-form-input-name {
+    width: 300px;
+  }
+  .footer-form-input-contact {
+    flex-direction: column;
+  }
+  .footer-form-input-contact input {
+    width: 300px;
+  }
+  .footer-form-btn {
+    flex-direction: column;
+    align-items: normal;
+    gap: 12px;
   }
   .footer__list {
     display: none;
   }
   .footer__contact-logo {
     display: none;
+  }
+  .footer-items {
+    padding-top: 0px;
   }
   .transform-line1 {
     transform: rotate(-45deg) translate(-3px, 1px);

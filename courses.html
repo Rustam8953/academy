@@ -15,7 +15,11 @@
 <body>
     <header class="header">
         <div class="nav header-dark"></div>
-        <div class="mobile-menu"></div>
+        <div class="mobile-block">
+            <div class="mobile-menu">
+            
+            </div>
+        </div>
     </header>
     <container class="container">
         <div class="courses">
@@ -23,7 +27,9 @@
                 <div class="box">
                     <div class="courses__title title tilte-dark">Все программы обучения</div>
                     <div class="courses__block">
-                        <div class="courses__left"></div>
+                        <div class="courses__left">
+                            <label class="label"><input type="radio" checked placeholder="qwerty">Новичок</label>
+                        </div>
                         <div class="courses__right">
                             <div class="container__md1-right slider">
                                 <div class="slider__wrapper md1-slider">
@@ -49,60 +55,43 @@
                                     </nav>
                                     <div class="slider__items container__md1-items">
                                         <div class="slider__item container__md1-item" data-section="1">
-                                            <div class="container__md1-block">
-                                                <span class="container__md1-link"><span class="container__md1-link-text">Робототехника</span><span class="container__md1-blur"></span></span>
+                                                <span class="container__md1-link">Робототехника</span>
                                                 <span class="container__md1-link">Создание игр</span>
-                                                <span class="container__md1-link">Web-разработка</span>
+                                                <a href="" class="container__md1-link">Web-разработка</a>
                                                 <span class="container__md1-link">Мультимедиа</span>
                                                 <span class="container__md1-link">Шахматы</span>
-                                            </div>
-                                            <div class="container__md1-block">
-                                                <span class="container__md1-link">3D-моделирование и дизайн</span>
+                                                <span class="container__md1-link">3Dмоделирование и дизайн</span>
                                                 <span class="container__md1-link">Английский язык</span>
                                                 <span class="container__md1-link">Блогинг</span>
                                                 <span class="container__md1-link">Soft skills</span>
-                                            </div>
                                         </div>
                                         <div class="slider__item container__md1-item" data-section="2">
-                                            <div class="container__md1-block">
                                                 <span class="container__md1-link"><span class="container__md1-link-text">Робототехника</span><span class="container__md1-blur"></span></span>
                                                 <span class="container__md1-link">Создание игр</span>
                                                 <span class="container__md1-link">Web-разработка</span>
                                                 <span class="container__md1-link">Мультимедиа</span>
                                                 <span class="container__md1-link">Шахматы</span>
-                                            </div>
-                                            <div class="container__md1-block">
-                                                <span class="container__md1-link">3D-моделирование и дизайн</span>
+                                                <span class="container__md1-link">3Dмоделирование и дизайн</span>
                                                 <span class="container__md1-link">Английский язык</span>
                                                 <span class="container__md1-link">Блогинг</span>
                                                 <span class="container__md1-link">Soft skills</span>
-                                            </div>
                                         </div>
                                         <div class="slider__item container__md1-item" data-section="3">
-                                            <div class="container__md1-block">
                                                 <span class="container__md1-link"><span class="container__md1-link-text">Робототехника</span><span class="container__md1-blur"></span></span>
                                                 <span class="container__md1-link">Создание игр</span>
                                                 <span class="container__md1-link">Web-разработка</span>
                                                 <span class="container__md1-link">Мультимедиа</span>
                                                 <span class="container__md1-link">Шахматы</span>
-                                            </div>
-                                            <div class="container__md1-block">
-                                                <span class="container__md1-link">3D-моделирование и дизайн</span>
+                                                <span class="container__md1-link">3Dмоделирование и дизайн</span>
                                                 <span class="container__md1-link">Английский язык</span>
                                                 <span class="container__md1-link">Блогинг</span>
                                                 <span class="container__md1-link">Soft skills</span>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="courses__items">
-                                <div class="courses__item">
-                                    <div class="courses__item-subtitle">Программа</div>
-                                    <div class="courses__item-title">«Разработка мобильных приложений»</div>
-                                    <div class="courses__item-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются на смартфонах, умных часах и планшетах. </div>
-                                    <div class="courses__item-date">24 месяца</div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -124,6 +113,7 @@
             })
         })
     </script>
+    <script src="./js/courses/courses.js"></script>
     <script src="./js/tel.js"></script>
     <script src="./js/footer/footer.js"></script>
 </body>

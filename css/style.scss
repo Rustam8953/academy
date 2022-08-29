@@ -12,6 +12,8 @@ $greyNav: #828282;
     align-items: center;
     font-size: 14px;
     font-weight: 500;
+    position: relative;
+    justify-content: center;
     &-logo {
         background: url('./../img/header/Group\ 1.svg');
         height: 71px;
@@ -28,8 +30,24 @@ $greyNav: #828282;
     }
     &-list {
         display: flex;
-        gap: 50px;
         align-items: center;
+        height: 100%;
+        flex: 0.7;
+        &-item {
+            height: 100%;
+            padding-top: 4px;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+            white-space: bottom;
+            position: relative;
+            border-bottom: 4px solid transparent;
+            &:hover {
+                border-color: black;
+                text-decoration: none;
+            }
+        }
     }
     &-contact {
         display: flex;
@@ -40,6 +58,34 @@ $greyNav: #828282;
             font-weight: 600;
             color: $blueTextColor;
             text-decoration: none;
+        }
+    }
+    &-block {
+        height: 110px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        position: fixed;
+        background-color: #ffffff;
+        z-index: 10000000;
+        & .box {
+            height: 100%;
+        }
+    }
+    & progress {
+        position: absolute;
+        top: 110px;
+        height: 4px;
+        width: 100%;
+        z-index: 30;
+        border-radius: 0px;
+        background-color: #ffffff;
+        &::-webkit-progress-bar {
+            background-color: rgb(199, 188, 188);
+        }
+        &::-webkit-progress-value {
+            background-color: rgb(101, 101, 168);
         }
     }
 }
@@ -204,6 +250,7 @@ $greyNav: #828282;
         }
     }
     &__md2 {
+        overflow: hidden;
         &-block {
             width: 780px;
             height: 436px;
@@ -1016,6 +1063,19 @@ $greyNav: #828282;
 
 .courses {
     padding-bottom: 330px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 430px);
+        gap: 20px;
+        grid-template-rows: 250px;
+    }
+    &__item {
+        height: 250px;
+        width: 430px;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 1px 1px 10px 1px rgb(141, 131, 131);
+    }
 }
 
 .contact {
@@ -1082,13 +1142,13 @@ $greyNav: #828282;
 }
 
 .footer {
-    background-color: $blueTextColor;
-    padding: 70px 0 55px;
     color: #ffffff;
     font-size: 14px;
     position: relative;
     &-items {
         display: flex;
+        background-color: $blueTextColor;
+        padding: 70px 0 55px;
         gap: 80px;
     }
     &__contact {
@@ -1247,9 +1307,10 @@ $greyNav: #828282;
             position: absolute;
             top: 24px;
             left: -50px;
-            &::before {
-                content: url('./../img/footer/Сова-01\ 2.svg');
-            }
+            width: 277px;
+            height: 312px;
+            background: url('./../img/footer/Сова-01\ 2.svg');
+            background-size: cover;
         }
         &-bckg {
             width: 1140px;
@@ -1269,6 +1330,10 @@ $greyNav: #828282;
         position: absolute;
         width: 1180px;
         top: -230px;
+    }
+    & .box {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -1371,6 +1436,8 @@ $greyNav: #828282;
 .display {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
 .slider {
@@ -1749,7 +1816,7 @@ input {
 
 @media(max-width: 800px) {
     .nav {
-        position: absolute;
+        position: fixed;
         z-index: 100;
         height: 100%;
         margin-top: 60px;
@@ -1780,6 +1847,12 @@ input {
         &-contact {
             flex-direction: column;
             gap: 12px;
+        }
+        & progress {
+            display: none;
+        }
+        &-block {
+            height: 100%;
         }
     }
     .box {
@@ -1828,14 +1901,36 @@ input {
         }
     }
     .mobile {
+        &-block {
+            width: 100%;
+            height: 60px;
+        }
         &-menu {
             display: flex;
             height: 60px;
             background-color: $blueTextColor;
             align-items: center;
+            position: fixed;
+            z-index: 1000000;
+            width: 100%;
             & .box {
                 display: flex;
                 justify-content: space-between;
+            }
+            & progress {
+                height: 2px;
+                position: fixed;
+                width: 100%;
+                top: 60px;
+                left: 0;
+                z-index: 30;
+                background-color: white;
+                &::-webkit-progress-bar {
+                    background-color: rgb(199, 188, 188);
+                }
+                &::-webkit-progress-value {
+                    background-color: rgb(101, 101, 168);
+                }
             }
         }
         &-logo {
@@ -1856,7 +1951,8 @@ input {
             flex-direction: column;
             gap: 3px;
             justify-content: center;
-            transform: rotate(180deg)
+            transform: rotate(180deg);
+            overflow: hidden;
         }
         &-line {
             width: 18px;
@@ -1875,6 +1971,7 @@ input {
     .container {
         &__md1 {
             flex-direction: column;
+            padding: 40px 0 38px;
             &-message {
                 background: url('./../img/mobile/Union\ \(1\).svg');
                 width: 300px;
@@ -1893,6 +1990,7 @@ input {
                 padding: 0 10px;
             }
             &-right {
+                padding-top: 36px;
                 & .slider__indicators {
                     width: 300px;
                     & .slider-display {
@@ -1909,9 +2007,11 @@ input {
                 line-height: 58px;
                 margin-right: 10px;
                 white-space: nowrap;
+                font-size: 12px;
             }
             &-items {
                 height: 400px;
+                padding-top: 20px;
             }
             &-item {
                 height: 800px;
@@ -1973,6 +2073,7 @@ input {
             }
         }
         &__md6 {
+            padding-bottom: 20px;
             &-items {
                 justify-content: center;
                 grid-template-areas: 
@@ -2032,6 +2133,7 @@ input {
             }
         }
         &__md5 {
+            padding: 34px 0 0px;
             &-items {
                 display: grid;
                 grid-template-columns: repeat(2, 145px);
@@ -2056,6 +2158,7 @@ input {
             }
         }
         &__events {
+            padding-bottom: 50px;
             &-items {
                 grid-template-areas:
                     'item1'
@@ -2075,6 +2178,7 @@ input {
         }
     }
     .news {
+        padding-bottom: 50px;
         &-items {
             grid-template-columns: repeat(1, 300px);
             grid-auto-rows: inherit;
@@ -2135,16 +2239,69 @@ input {
         margin-left: 0;
         margin: 0 auto;
     }
+    .grey-block {
+        background-color: #ffffff;
+    }
     .footer {
-        padding-bottom: 20px;
         &-position {
             width: 320px;
             position: static;
-            display: none;
         }
         &-form {
             flex-direction: column;
             width: 300px;
+            padding: 0;
+            padding-bottom: 40px;
+            &-right {
+                width: 300px !important;
+            }
+            &-bckg {
+                display: none;
+            }
+            &-left {
+                width: 270px;
+            }
+            &-img {
+                width: 100%;
+                height: 150px;
+                background-size: contain;
+                margin-left: 30px;
+            }
+            &-bird {
+                width: 120px;
+                height: 136px;
+                left: -95px;
+            }
+            &-text {
+                width: 220px;
+                top: 9px;
+                left: 35px;
+            }
+            &-title {
+                font-size: 18px;
+                line-height: 20px;
+                padding-bottom: 10px;
+            }
+            &-subtitle {
+                font-size: 12px;
+                line-height: 16px;
+            }
+            &-input {
+                &-name {
+                    width: 300px;
+                }
+                &-contact {
+                    flex-direction: column;
+                    & input {
+                        width: 300px;
+                    }
+                }
+            }
+            &-btn {
+                flex-direction: column;
+                align-items: normal;
+                gap: 12px;
+            }
         }
         &__list {
             display: none;
@@ -2153,6 +2310,9 @@ input {
             &-logo {
                 display: none;
             }
+        }
+        &-items {
+            padding-top: 0px;
         }
     }
     .transform  {
