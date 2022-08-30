@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/noUiSlider/nouislider.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./lib/ui-components-master/ChiefSlider/chief-slider.min.css">
@@ -22,13 +23,69 @@
         </div>
     </header>
     <container class="container">
-        <div class="courses">
-            <div class="grey-block">
+        <div class="grey-block">
+            <div class="courses">
                 <div class="box">
                     <div class="courses__title title tilte-dark">Все программы обучения</div>
                     <div class="courses__block">
                         <div class="courses__left">
-                            <label class="label"><input type="radio" checked placeholder="qwerty">Новичок</label>
+                            <div class="widget-block">
+                                <form action="">
+                                    <div class="widget">
+                                        <div class="widget-title">Уровень сложности</div>
+                                        <div class="widget-body">
+                                            <label class="radio">
+                                                <input type="radio" class="radio-input" name="term" checked>
+                                                <span class="radio-fake"></span>
+                                                <span class="radio-title">Новичок</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" class="radio-input" name="term" id="">
+                                                <span class="radio-fake"></span>
+                                                <span class="radio-title">Пользователь</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" class="radio-input" name="term" id="">
+                                                <span class="radio-fake"></span>
+                                                <span class="radio-title">Профессионал</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" class="radio-input" name="term" id="">
+                                                <span class="radio-fake"></span>
+                                                <span class="radio-title">Читер</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="widget">
+                                        <div class="widget-title">Тип обучения</div>
+                                        <div class="widget-body">
+                                            <label class="radio">
+                                                <input type="radio" class="radio-input" name="learn" checked>
+                                                <span class="radio-fake"></span>
+                                                <span class="radio-title">Любой</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" class="radio-input" name="learn" id="">
+                                                <span class="radio-fake"></span>
+                                                <span class="radio-title">Профессия</span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" class="radio-input" name="learn" id="">
+                                                <span class="radio-fake"></span>
+                                                <span class="radio-title">Курс</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="widget">
+                                        <div class="widget-title">Длительность</div>
+                                        <div class="widget-progress">от 1 до 24 месяцев</div>
+                                        <div id="slider"></div>
+                                    </div>
+                                </form>
+                                <div class="target">
+                                    <div class="target-body"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="courses__right">
                             <div class="container__md1-right slider">
@@ -101,6 +158,8 @@
     </container>
     <footer class="footer footer-with-block"></footer>
 
+    <script src="./lib/wNumb/wNumb.min.js"></script>
+    <script src="./lib/noUiSlider/nouislider.min.js"></script>
     <script src="./js/header/header.js"></script>
     <script defer src="./lib/ui-components-master/ChiefSlider/chief-slider.min.js"></script>
     <script>

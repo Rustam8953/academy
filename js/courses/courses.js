@@ -41,3 +41,21 @@ coursArray.forEach((item) => {
     </div>`;
     windowCourse.insertAdjacentHTML('beforeend', coursHTML)
 })
+
+
+const sliderEl = document.getElementById('slider');
+
+noUiSlider.create(sliderEl, {
+    start: [5],
+    step: 1,
+    connect: 'lower',
+    range: {
+        'min': 0,
+        'max': 24
+    },
+    behaviour: 'tap-drag',
+    tooltips: true,
+    format: wNumb({
+        decimals: 0
+    }),
+});
