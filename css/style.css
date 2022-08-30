@@ -128,6 +128,12 @@
   width: 1032px;
 }
 
+.row-block-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .row-bck {
   background-color: #00093C;
   height: 100%;
@@ -395,7 +401,7 @@
 }
 
 .container__md4-block {
-  width: 1920px;
+  width: auto;
   position: relative;
 }
 
@@ -404,7 +410,8 @@
   height: 550px;
   width: 1920px;
   top: 19px;
-  left: 0;
+  left: 50%;
+  margin-left: -960px;
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -469,7 +476,7 @@
 }
 
 .container__md4 .slider__items .slider__item {
-  width: 240px !important;
+  width: 280px !important;
   flex: 0;
 }
 
@@ -1230,6 +1237,36 @@
   border-radius: 20px;
   padding: 30px;
   box-shadow: 1px 1px 10px 1px #8d8383;
+  color: #4F4F4F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.courses__item-subtitle {
+  font-size: 12px;
+}
+
+.courses__item-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #00093C;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.courses__item-title::before {
+  content: url("./../img/container/courses/Group 815 (1).svg");
+}
+
+.courses__item-text {
+  font-size: 12px;
+}
+
+.courses__item-date {
+  font-size: 12px;
+  color: #000000;
 }
 
 .courses__left {
@@ -1865,7 +1902,7 @@ li {
 }
 
 .review-item {
-  width: 240px !important;
+  width: 280px !important;
   background-color: #ffffff;
   position: relative;
   z-index: 10;
@@ -1886,8 +1923,8 @@ li {
 }
 
 .review-img {
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
   background: url("./../img/container/md4/user/Ellipse 185.svg");
 }
 
@@ -1916,14 +1953,18 @@ li {
 }
 
 .review-window {
-  display: flex;
+  display: grid;
+  width: 2000px !important;
+  grid-template-columns: repeat(8, 240px);
   align-items: flex-start;
   gap: 20px;
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .review-window .owl-item {
-  width: 240px !important;
+  width: 200px !important;
 }
 
 .review-window .owl-stage {
@@ -2222,8 +2263,13 @@ input {
     width: 320px;
     margin: 0 auto;
   }
+  .row-block-img {
+    width: 300px;
+    height: 224px;
+    position: relative;
+    margin: 0 auto;
+  }
   .row-items {
-    padding-top: 224px;
     width: 100%;
     height: 100%;
   }
@@ -2529,6 +2575,7 @@ input {
   }
   .container__events-items {
     grid-template-areas: 'item1' 'item6' 'item7' 'item8' 'item9' 'item10' 'item11' 'item12' 'item13';
+    justify-content: center;
   }
   .container__events-item {
     width: 300px;
@@ -2539,6 +2586,7 @@ input {
   .news-items {
     grid-template-columns: repeat(1, 300px);
     grid-auto-rows: inherit;
+    justify-content: center;
   }
   .news-page {
     padding-bottom: 50px;
@@ -2571,6 +2619,9 @@ input {
     width: 300px;
     justify-content: center;
     align-items: center;
+  }
+  .login__item-title {
+    text-align: center;
   }
   .login-text {
     font-size: 14px;
@@ -2678,7 +2729,7 @@ input {
     padding-bottom: 50px;
   }
   .courses__left {
-    transform: translateX(-120%);
+    transform: translateX(-200%);
     position: absolute;
   }
   .courses__items {

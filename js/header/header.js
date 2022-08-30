@@ -14,8 +14,7 @@ if(headerDark) {
     darkWindow()
 }
 
-if(screen.width <= 800) {
-    const mobileHTML = `
+const mobileHTML = `
     <div class="box">
         <a href='./index.html' class="mobile-logo"></a>
         <div class="mobile-block-burger">
@@ -28,7 +27,7 @@ if(screen.width <= 800) {
     </div>
     <progress value=""></progress>`
     mobileBlock.insertAdjacentHTML('beforeend', mobileHTML);
-}
+
 function darkWindow() {
     const headerDarkHTML = `
     <div class="box">

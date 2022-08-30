@@ -58,6 +58,34 @@ const reviewArray = [
         star: "4,47 / 5",
         about: "Студент курса «WEB-разработчик»",
     },
+    {
+        id: 9,
+        name: "Имя Фамилия",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
+        star: "4,47 / 5",
+        about: "Студент курса «WEB-разработчик»",
+    },
+    {
+        id: 10,
+        name: "Имя Фамилия",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
+        star: "4,47 / 5",
+        about: "Студент курса «WEB-разработчик»",
+    },
+    {
+        id: 11,
+        name: "Имя Фамилия",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
+        star: "4,47 / 5",
+        about: "Студент курса «WEB-разработчик»",
+    },
+    {
+        id: 12,
+        name: "Имя Фамилия",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
+        star: "4,47 / 5",
+        about: "Студент курса «WEB-разработчик»",
+    },
 ]
 
 reviewArray.forEach((item) => {
@@ -76,7 +104,7 @@ reviewArray.forEach((item) => {
     reviewWindow.insertAdjacentHTML('beforeend', reviewHTML);
 })
 
-console.log(650 * reviewArray.length);
+console.log(260 * reviewArray.length);
 
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
