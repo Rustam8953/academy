@@ -1,1 +1,1 @@
-<h2><a href="https://rawcdn.githack.com/Rustam8953/academy/8976f46d81e1f9d0af3cf2edd5759d60428ba277/index.html">FUTURE</a></h2>
+<h2><a href="https://rawcdn.githack.com/Rustam8953/academy/66ed69901b20c7f62fe9eb3fba299e7cec408906/index.html">FUTURE</a></h2>
