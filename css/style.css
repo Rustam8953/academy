@@ -2180,12 +2180,14 @@ input {
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
+    flex: 0;
   }
   .nav-list-item {
     padding: 0;
     margin: 0;
-    height: 30px;
+    height: 25px;
     border-bottom: 0px;
+    flex-grow: 0;
   }
   .nav-list-item:hover {
     border: 0;
