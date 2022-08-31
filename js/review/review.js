@@ -8,6 +8,7 @@ const reviewArray = [
         star: "4,87 / 5",
         about: "Студент курса «WEB-разработчик»",
     },
+
     {
         id: 2,
         name: "Имя Фамилия",
@@ -51,46 +52,11 @@ const reviewArray = [
         star: "4,47 / 5",
         about: "Студент курса «WEB-разработчик»",
     },
-    {
-        id: 8,
-        name: "Имя Фамилия",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
-        star: "4,47 / 5",
-        about: "Студент курса «WEB-разработчик»",
-    },
-    {
-        id: 9,
-        name: "Имя Фамилия",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
-        star: "4,47 / 5",
-        about: "Студент курса «WEB-разработчик»",
-    },
-    {
-        id: 10,
-        name: "Имя Фамилия",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
-        star: "4,47 / 5",
-        about: "Студент курса «WEB-разработчик»",
-    },
-    {
-        id: 11,
-        name: "Имя Фамилия",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
-        star: "4,47 / 5",
-        about: "Студент курса «WEB-разработчик»",
-    },
-    {
-        id: 12,
-        name: "Имя Фамилия",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus, id tristique lorem placerat. Curabitur pellentesque est bibendum urna facilisis varius. In hac habitasse platea dictumst. In ut dui sodales.",
-        star: "4,47 / 5",
-        about: "Студент курса «WEB-разработчик»",
-    },
 ]
 
 reviewArray.forEach((item) => {
     const reviewHTML = `
-    <div class="review-item slider__item" data-id=${item.id}>
+    <div class="review-item" data-id=${item.id}>
         <div class="review-info">
             <div class="review-img"></div>
             <div class="review-contact">

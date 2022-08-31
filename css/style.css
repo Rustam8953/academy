@@ -238,8 +238,8 @@
 
 .container__md1-message {
   background: url("./../img/container/md1/Union.svg");
-  width: 265px;
-  height: 220px;
+  width: 274px;
+  height: 230px;
   background-size: cover;
   background-position: center;
   font-size: 18px;
@@ -282,7 +282,25 @@
 
 .container__md1-item {
   width: 800px !important;
-  padding-left: 20px;
+  opacity: 0;
+  transition: all 0.6s ease-in;
+  padding-left: 10px;
+}
+
+.container__md1-item.slider__item_active {
+  opacity: 1;
+}
+
+.container__md1 .slider-item {
+  height: 70px;
+}
+
+.container__md1 .slider__items {
+  gap: 0 !important;
+}
+
+.container__md1 .slider__wrapper {
+  margin: 0;
 }
 
 .container__md2 {
@@ -469,10 +487,6 @@
 .container__md4 .slider__wrapper {
   width: 100%;
   overflow: static;
-}
-
-.container__md4 .slider__items {
-  width: 100% !important;
 }
 
 .container__md4 .slider__items .slider__item {
@@ -1018,11 +1032,26 @@
 
 .login .slider__wrapper {
   width: 580px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .login .slider__indicators {
   width: 580px !important;
   justify-content: center;
+}
+
+.login .slider__indicators li {
+  height: 36px;
+  width: 50%;
+}
+
+.login .slider__items {
+  display: flex;
+  width: 580px;
 }
 
 .login__indicators-item {
@@ -1828,8 +1857,28 @@
 
 .slider__indicators {
   display: flex;
+  position: static;
   width: 880px;
-  justify-content: space-between;
+  background-color: transparent;
+  margin: 0;
+  gap: 0;
+}
+
+.slider__indicators li {
+  height: 100px;
+  width: 33.3%;
+  margin: 0;
+  border: 0;
+  text-indent: 0;
+  background-color: transparent;
+}
+
+.slider__indicators li.active {
+  background-color: transparent;
+}
+
+.slider__indicators li.active .slider-border {
+  border-color: #27AAE1;
 }
 
 .slider-text::before {
@@ -1841,6 +1890,7 @@
   flex-direction: column;
   font-size: 16px;
   font-weight: 700;
+  color: black;
 }
 
 .slider-text-title span {
@@ -1863,6 +1913,7 @@
   justify-content: center;
   gap: 16px;
   padding-bottom: 13px;
+  background-color: transparent;
 }
 
 .slider-border {
@@ -1872,11 +1923,16 @@
 
 .slider-item {
   width: 100%;
+  height: 60px;
 }
 
 .slider__item {
   height: 100%;
   display: inline-block;
+}
+
+.slider__items {
+  gap: 20px !important;
 }
 
 li {
@@ -1914,6 +1970,8 @@ li {
   gap: 8px;
   font-size: 14px;
   font-weight: 500;
+  align-items: flex-start;
+  pointer-events: none;
 }
 
 .review-info {
@@ -1953,14 +2011,21 @@ li {
 }
 
 .review-window {
-  display: grid;
-  width: 2000px !important;
-  grid-template-columns: repeat(8, 240px);
+  width: 1200px;
+  display: flex;
   align-items: flex-start;
   gap: 20px;
-  width: 100%;
   position: relative;
-  z-index: 10;
+  z-index: 50;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0 30px;
+}
+
+.review-window::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .review-window .owl-item {
@@ -2202,7 +2267,91 @@ input {
   padding-left: 20px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
+  .box {
+    width: 1150px;
+    margin: 0 auto;
+  }
+  .nav-block {
+    width: 100%;
+  }
+  .row {
+    height: 380px;
+  }
+  .row-bck2 {
+    display: none;
+  }
+  .row-img {
+    height: 380px;
+  }
+  .row-title {
+    font-size: 24px;
+  }
+  .row-subtitle {
+    font-size: 14px;
+  }
+  .row-text {
+    width: 475px;
+  }
+  .container__md1 {
+    gap: 10px;
+  }
+  .container__md1-link {
+    margin-right: 10px;
+  }
+  .container__md1-item {
+    width: 800px !important;
+  }
+  .container__md1 .slider__wrapper {
+    width: 800px !important;
+  }
+  .container__md2 {
+    overflow: hidden;
+  }
+  .container__md2-line2 {
+    display: none;
+  }
+  .container__md6-items {
+    gap: 10px;
+  }
+  .container__md6-items .item1 {
+    width: 1150px;
+  }
+  .container__md6-items .item2 {
+    width: 450px;
+  }
+  .slider__items {
+    width: 800px !important;
+  }
+  .slider__wrapper {
+    padding: 0;
+    margin: 0;
+  }
+  .slider__indicators {
+    width: 800px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .footer-position {
+    width: 1150px;
+  }
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .courses__right {
+    width: 800px;
+  }
+  .courses__items {
+    grid-template-columns: repeat(2, 400px);
+  }
+  .courses__item {
+    width: 400px;
+  }
+  .courses .slider__wrapper {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1000px) {
   .nav {
     position: fixed;
     z-index: 100;
@@ -2254,7 +2403,8 @@ input {
     height: 100%;
   }
   .box {
-    width: 320px;
+    width: 800px;
+    margin: 0 auto;
   }
   .row {
     height: 410px;
@@ -2395,9 +2545,32 @@ input {
   .mobile-line3.active {
     transform: rotate(-90deg) translateX(-1px);
   }
+  .footer__list {
+    display: none;
+  }
+  .footer .box {
+    justify-content: center;
+  }
+  .footer-items {
+    padding: 10px 0;
+  }
+  .footer__contact {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .box {
+    max-width: 320px;
+    min-width: 200px;
+  }
   .container__md1 {
     flex-direction: column;
     padding: 40px 0 38px;
+  }
+  .container__md1 .slider__wrapper {
+    width: 300px !important;
+    margin: 0 auto;
   }
   .container__md1-message {
     background: url("./../img/mobile/Union (1).svg");
@@ -2420,7 +2593,7 @@ input {
     padding-top: 36px;
   }
   .container__md1-right .slider__indicators {
-    width: 300px;
+    width: 300px !important;
   }
   .container__md1-right .slider__indicators .slider-display {
     flex-direction: column;
@@ -2438,11 +2611,13 @@ input {
   }
   .container__md1-items {
     height: 400px;
+    width: 300px !important;
     padding-top: 20px;
   }
   .container__md1-item {
     height: 800px;
     padding-left: 10px;
+    padding-top: 30px;
   }
   .container__md1-block {
     display: inline-block;
@@ -2481,6 +2656,7 @@ input {
     width: 300px;
     margin: 0 auto;
     padding: 15px 0 18px;
+    overflow: hidden;
   }
   .container__md3-title {
     width: 300px;
@@ -2502,7 +2678,7 @@ input {
     grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5';
   }
   .container__md6-item {
-    width: 300px;
+    width: 300px !important;
     flex-direction: column;
     position: relative;
     padding: 20px 20px;
@@ -2606,13 +2782,17 @@ input {
   }
   .login {
     width: 300px;
+    padding: 40px 0 50px;
   }
   .login .slider__wrapper {
-    width: 300px;
+    width: 300px !important;
     margin: 0;
     padding: 0;
   }
   .login .slider__indicators {
+    width: 300px !important;
+  }
+  .login .slider__items {
     width: 300px !important;
   }
   .login__item-input {
@@ -2713,14 +2893,19 @@ input {
   .footer-items {
     padding-top: 0px;
   }
-  .transform-menu {
-    transform: translateX(0%);
+  .footer .box {
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto;
   }
   .title {
     font-size: 24px;
   }
   .slider__indicators {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .slider__items {
+    gap: 0 !important;
   }
   a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -2740,6 +2925,13 @@ input {
   .courses__item {
     width: 300px;
   }
+  .review-window {
+    width: 320px;
+  }
+}
+
+.transform-menu {
+  transform: translateX(0%);
 }
 
 a {
